@@ -6,7 +6,7 @@
         <img src="https://img.shields.io/discord/340947847728070666" alt="Badosz Discord">
     </a>
     <a href="https://github.com/badosz0/vscode-milkscript">
-        <img src="https://img.shields.io/github/languages/top/badosz0/milkscript" alt="Languages">
+        <img src="https://img.shields.io/github/languages/top/badosz0/vscode-milkscript" alt="Languages">
     </a>
     <br>
     <strong>
