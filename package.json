@@ -9,7 +9,7 @@
     "categories": [
         "Programming Languages"
     ],
-    "icon": "./icon.png",
+    "icon": "./assets/icon.png",
     "contributes": {
         "languages": [{
             "id": "milkscript",
