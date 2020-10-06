@@ -1,0 +1,32 @@
+{
+    "name": "milkscript",
+    "displayName": "MilkScript",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "icon": "./icon.png",
+    "contributes": {
+        "languages": [{
+            "id": "milkscript",
+            "aliases": ["MilkScript", "milkscript"],
+            "extensions": ["milk"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "milkscript",
+            "scopeName": "source.milk",
+            "path": "./syntaxes/milkscript.tmLanguage.json"
+        }],
+        "snippets": [{
+                "language": "milkscript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+        
+    }
+}

@@ -1,0 +1,183 @@
+{
+	"name": "MilkScript",
+	"scopeName": "source.milk",
+	"patterns": [
+		{ "include": "#code" },
+		{ "include": "#class" }
+	],
+	"repository": {
+		"comment": {
+            "name": "comment.line.milkscript",
+            "match": "//.*"
+		},
+		"blockComment": {
+            "name": "comment.block.milkscript",
+            "begin": "/\\*",
+            "end": "\\*/",
+            "patterns": [ { "include": "#blockComment" } ]
+		},
+		"block": {
+            "begin": "{",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.section.block.begin.milkscript"
+                }
+            },
+            "end": "}",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.section.block.end.milkscript"
+                }
+            },
+            "name": "meta.block.milkscript",
+            "patterns": [
+                { "include": "#code" }
+            ]
+		},
+		"keyword": {
+            "patterns": [
+                {
+                    "name": "keyword.control.milkscript",
+                    "match": "\\b(if|else|for|switch|using|defer|return|enum|while|break|continue|class|extends|case|default|remove)\\b"
+                },
+                {
+                    "name": "keyword.operator.logical.milkscript",
+                    "match": "&&|\\|\\|"
+                },
+                {
+                    "name": "keyword.operator.range.milkscript",
+                    "match": "(\\.\\.\\.?)"
+                },
+                {
+                    "name": "keyword.operator.arithmetic.milkscript",
+                    "match": "(\\-|\\+|\\*|\/|%)"
+                },
+                {
+                    "name": "keyword.operator.comparison.milkscript",
+                    "match": "(==|!=|<=|>=|<|>)"
+                },
+                {
+                    "name": "keyword.operator.assignment.milkscript",
+                    "match": "(=)"
+                },
+                {
+                    "name": "keyword.operator.range.milkscript",
+                    "match": "(\\.\\.)"
+                }
+            ]
+		},
+		"constant": {
+            "patterns": [
+                {
+                    "name": "constant.language.milkscript",
+                    "match": "\\b(true|false|null)\\b"
+                },
+                {
+                    "name": "constant.numeric.milkscript",
+                    "match": "\\b(0x[0-9a-fA-F]*|[0-9]+(\\.?[0-9]*)?(e(\\+|-)?[0-9]+)?)\\b"
+                },
+                {
+                    "disabled_name": "variable.language.this.milkscript",
+                    "disabled_match": "@\\w+"
+                }
+            ]
+        },
+		"variable": {
+            "patterns": [
+                {
+                    "name": "entity.other.inherited-class",
+                    "match": "\\b(super)\\b"
+                },
+                {
+                    "name": "variable.other.readwrite.class.milkscript",
+                    "match": "(@)[a-zA-Z_]\\w*"
+                }
+            ]
+		},
+		"string": {
+            "name": "string.quoted.double.milkscript",
+            "begin": "\"",
+            "beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.ts"
+				}
+			},
+            "end": "\"",
+            "endCaptures": {
+				"1": {
+					"name": "punctuation.definition.string.end.ts"
+                }
+            },
+            "patterns": [
+                { "include": "#stringEscapes" },
+                { "include": "#interpolation" }
+            ]
+        },
+        "interpolation": {
+			"patterns": [
+				{
+                    "name": "meta.template.expression.ts",
+			        "begin": "\\$\\{",
+			        "beginCaptures": {
+				        "0": {
+                            "name": "punctuation.definition.template-expression.begin.ts"
+                        }
+			        },
+			        "end": "\\}",
+			        "endCaptures": {
+				       "0": {
+					        "name": "punctuation.definition.template-expression.end.ts"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "#code"
+                        }
+                    ]
+			    }
+			]
+		},
+		"stringEscapes": {
+            "patterns": [
+                {
+                    "name": "constant.character.escape.milkscript",
+                    "match": "\\\\(?:[0\"\\abfnrtv]|x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{4})"
+                },
+                {
+                    "name": "invalid.illegal.unknown-escape.milkscript",
+                    "match": "\\\\(?:x[0-9A-Fa-f]{0,1}|u[0-9A-Fa-f]{0,3}|U[0-9A-Fa-f]{0,7}|.)"
+                },
+                {
+                    "name": "constant.character.interpolation.milkscript",
+                    "match": "%\\((.*?)\\)"
+                }
+            ]
+        },
+        "directive": {
+			"name": "entity.name.tag",
+			"begin": "((#)(import|load|require|lua|const|define|location|ast|macro))\\b\\s*",
+			"end": "( *)"
+
+        },
+        "call": {
+            "name": "support.function.any-method.milkscript",
+            "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*(?:[(]|\\[\\[))"
+        },
+		"code": {
+            "patterns": [
+                { "include": "#blockComment" },
+                { "include": "#comment" },
+                { "include": "#block" },
+                { "include": "#keyword" },
+                { "include": "#constant" },
+                { "include": "#variable" },
+                { "include": "#string" },
+                { "include": "#call" },
+                { "include": "#directive" }
+            ]
+        }
+	}
+	
+}
+
+

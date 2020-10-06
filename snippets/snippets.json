@@ -1,0 +1,45 @@
+{
+    "import": {
+        "prefix": "#import",
+        "body": "#import \"$1\"",
+        "description": "import directive",
+        "scope": "source.milkscript"
+    },
+    "load": {
+        "prefix": "#load",
+        "body": "#load \"$1\"",
+        "description": "load directive",
+        "scope": "source.milkscript"
+    },
+    "class": {
+        "prefix": "class",
+        "body": "class $1 {\n\t$2\n}",
+        "description": "Class definition",
+        "scope": "source.milkscript"
+    },
+
+    "for": {
+        "prefix": "for",
+        "body": "for $1 {\n\t$2\n}",
+        "description": "for statement",
+        "scope": "source.milkscript"
+    },
+    "if": {
+        "prefix": "if",
+        "body": "if $1 {\n\t$2\n}",
+        "description": "if statement",
+        "scope": "source.milkscript"
+    },
+    "else": {
+        "prefix": "else",
+        "body": "else {\n\t$1\n}",
+        "description": "else clause",
+        "scope": "source.milkscript"
+    },
+    "while": {
+        "prefix": "while",
+        "body": "while $1 {\n\t$2\n}",
+        "description": "while statement",
+        "scope": "source.milkscript"
+    }
+}
