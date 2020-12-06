@@ -96,16 +96,16 @@
 		},
 		"string": {
             "name": "string.quoted.double.milkscript",
-            "begin": "\"",
+            "begin": "\"|'",
             "beginCaptures": {
 				"0": {
-					"name": "punctuation.definition.string.begin.ts"
+					"name": "punctuation.definition.string.begin.milkscript"
 				}
 			},
-            "end": "\"",
+            "end": "\"|'",
             "endCaptures": {
 				"1": {
-					"name": "punctuation.definition.string.end.ts"
+					"name": "punctuation.definition.string.end.milkscript"
                 }
             },
             "patterns": [
