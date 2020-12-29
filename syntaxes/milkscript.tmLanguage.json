@@ -94,7 +94,7 @@
                 },
                 {
                     "name": "variable.other.property.milkscript",
-                    "match": "(?:(?<=\\.)|(\\?\\.))\\s*(\\#?[_$[:alpha:]]*+(?!\\())"
+                    "match": "(?<=\\w.[.])[^\\s0-9][^\\s][^(.,)\\s]*"
                 }
             ]
 		},
