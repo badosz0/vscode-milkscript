@@ -91,6 +91,10 @@
                 {
                     "name": "variable.other.readwrite.class.milkscript",
                     "match": "(@)[a-zA-Z_]\\w*"
+                },
+                {
+                    "name": "variable.other.property.milkscript",
+                    "match": "(?<=(?:[\\w])[.])[^\\s0-9\"\\-,!@#$%?^&={}\\[\\]():;'+*|<>\\\\/][^()\\[\\],.\"\\-!@#$%?^&={}:;'+*|<>\\\\/\\s]*+(?!\\()"
                 }
             ]
 		},
