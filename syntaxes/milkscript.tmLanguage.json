@@ -38,7 +38,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.milkscript",
-                    "match": "\\b(if|else|for|switch|using|defer|return|enum|while|break|continue|class|extends|case|default|remove)\\b"
+                    "match": "\\b(if|else|for|switch|using|defer|return|enum|while|break|continue|class|extends|case|default|remove|operator)\\b"
                 },
                 {
                     "name": "keyword.operator.logical.milkscript",
