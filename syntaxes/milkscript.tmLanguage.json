@@ -159,7 +159,7 @@
         },
         "directive": {
 			"name": "entity.name.tag",
-			"begin": "((#)(import|load|require|lua|const|define|location|ast|macro|scope))\\b\\s*",
+			"begin": "((#)(import|require|lua|const|define|location|ast|macro|scope))\\b\\s*",
 			"end": "( *)"
 
         },
