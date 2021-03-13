@@ -2,8 +2,8 @@
     "name": "milkscript",
     "publisher": "badosz",
     "displayName": "MilkScript",
-    "description": "",
-    "version": "0.0.1",
+    "description": "MilkScript language support for Visual Studio Code",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.43.0"
     },
@@ -14,7 +14,7 @@
         "type": "git",
         "url": "git+https://github.com/badosz0/vscode-milkscript.git"
       },
-    "icon": "https://raw.githubusercontent.com/badosz0/vscode-milkscript/master/assets/milkscript_sygnet.svg",
+    "icon": "assets/milkscript_sygnet.png",
     "contributes": {
         "languages": [{
             "id": "milkscript",
