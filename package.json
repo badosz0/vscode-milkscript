@@ -1,5 +1,6 @@
 {
     "name": "milkscript",
+    "publisher": "badosz",
     "displayName": "MilkScript",
     "description": "",
     "version": "0.0.1",
@@ -9,6 +10,10 @@
     "categories": [
         "Programming Languages"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/badosz0/vscode-milkscript.git"
+      },
     "icon": "./assets/icon.png",
     "contributes": {
         "languages": [{
@@ -27,6 +32,5 @@
                 "path": "./snippets/snippets.json"
             }
         ]
-        
     }
 }

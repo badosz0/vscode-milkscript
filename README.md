@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="assets/milkscript-logo-big.png" alt="MilkScript logo" height="90" >
+    <img src="assets/milkscript_sygnet.svg" alt="MilkScript logo" height="120" >
 </p>
 <p align="center">
     <a href="https://discord.gg/badosz">
