@@ -98,7 +98,26 @@
                 }
             ]
 		},
-		"string": {
+        "single-string": {
+            "name": "string.quoted.single.milkscript",
+            "begin": "'",
+            "beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.milkscript"
+				}
+			},
+            "end": "'",
+            "endCaptures": {
+				"1": {
+					"name": "punctuation.definition.string.end.milkscript"
+                }
+            },
+            "patterns": [
+                { "include": "#stringEscapes" },
+                { "include": "#interpolation" }
+            ]
+        },
+		"double-string": {
             "name": "string.quoted.double.milkscript",
             "begin": "\"",
             "beginCaptures": {
@@ -175,7 +194,8 @@
                 { "include": "#keyword" },
                 { "include": "#constant" },
                 { "include": "#variable" },
-                { "include": "#string" },
+                { "include": "#double-string" },
+                { "include": "#single-string" },
                 { "include": "#call" },
                 { "include": "#directive" }
             ]
@@ -183,5 +203,3 @@
 	}
 	
 }
-
-
